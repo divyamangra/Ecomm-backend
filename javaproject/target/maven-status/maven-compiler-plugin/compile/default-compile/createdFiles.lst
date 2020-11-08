@@ -1,0 +1,8 @@
+com\practice\controller\ProductController.class
+com\practice\model\Cart.class
+com\practice\model\Customer.class
+com\practice\dao\ProductDao.class
+com\practice\service\ProductService.class
+com\practice\dao\IProductDao.class
+com\practice\model\Product.class
+com\practice\service\IProductService.class
