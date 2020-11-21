@@ -15,17 +15,21 @@ public class Product {
 	private String product_name;
 	@Column(nullable=false)
 	private String product_details;
+
+	public Product() {
+
+	}
+
 	@Column(nullable=false)
 	private String price;
 	@Column(nullable=false)
 	private String category;
-	@Lob
-	@Column(columnDefinition="BLOB")
-	private byte[] image;
+	@Column
+	private String image;
 	
 	
 	public Product(int product_id, String product_name, String product_details, String price, String category,
-			byte[] image) {
+			String image) {
 		super();
 		this.product_id = product_id;
 		this.product_name = product_name;
@@ -64,10 +68,10 @@ public class Product {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public byte[] getImage() {
+	public String getImage() {
 		return image;
 	}
-	public void setImage(byte[] image) {
+	public void setImage(String image) {
 		this.image = image;
 	} 
 	

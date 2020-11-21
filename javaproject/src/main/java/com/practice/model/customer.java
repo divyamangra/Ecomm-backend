@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class Customer {
-	
+
 	@Id
 	private String username;
 	@Column(name="cust_name", nullable= false)
@@ -51,10 +51,14 @@ public class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
-	
-	
-	
 
+
+    public Customer(String username, String cust_name, String emailId, String phoneNumber, String address) {
+	    super();
+        this.username = username;
+        this.cust_name = cust_name;
+        this.emailId = emailId;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
 }

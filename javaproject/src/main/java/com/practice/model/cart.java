@@ -1,13 +1,16 @@
 package com.practice.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table
+@Table //hibernate automatically makes entity into table ///normally used for table name only
 public class Cart {
-	@Column(name="username")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name="username")
 private String username;
 	@Column
 private int product_id;
@@ -32,5 +35,18 @@ public void setPieces(int pieces) {
 	this.pieces = pieces;
 }
 
-	
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Cart(Integer id, String username, int product_id, int pieces) {
+        this.id = id;
+        this.username = username;
+        this.product_id = product_id;
+        this.pieces = pieces;
+    }
 }
